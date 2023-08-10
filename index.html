@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fe389cbe50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container1">
+        <nav class="nav-bar cover-div">
+          <p>Port<span>folio</span></p>
+          <a href="#" class="toggle-button" id="toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div>
+            <ul>
+              <li class="navbar-links"><a href="#">Project</a></li>
+              <li class="navbar-links"><a href="#">Skills</a></li>
+              <li class="navbar-links"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="contact">
+            <img src="img/icon-facebook.svg" alt="facebook" />
+            <img src="img/icon-instagram.svg" alt="instagram" />
+            <img src="img/icon-twitter.svg" alt="twitter" />
+          </div>
+        </nav>
+        <div class="main-content cover-div">
+          <p>Hi, my name is</p>
+          <h2>Saad<span> Ali Khan.</span></h2>
+          <h1>
+            I develop websites using <span>html</span> and <span>css</span>
+          </h1>
+          <p>I am a developer specializing in html and css</p>
+          <p>
+            Currently, I am completing my HSC part II from
+            <a
+              href="https://en.wikipedia.org/wiki/D._J._Sindh_Government_Science_College"
+            >
+              DJ SINDH GOVT. SCIENCE COLLEGE</a
+            >
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Ski<span>lls</span></h1>
+      <div class="skills">
+        <div class="box">
+          <div class="icon color1"><i class="fa-brands fa-html5"></i></div>
+          <div class="counter">85</div>
+        </div>
+        <div class="box">
+          <div class="icon color2"><i class="fa-brands fa-css3-alt"></i></div>
+          <div class="counter">60</div>
+        </div>
+        <div class="box">
+          <div class="icon color3"><i class="fab fa-js"></i></div>
+          <div class="counter">9</div>
+        </div>
+        <div class="box">
+          <div class="icon color4"><i class="fa-brands fa-python"></i></div>
+          <div class="counter">4</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- projects -->
+    <div class="projects"></div>
+
+    <!-- javascript -->
+
+    <script src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".counter").each(function () {
+          $(this)
+            .prop("Counter", 0)
+            .animate(
+              {
+                Counter: $(this).text(),
+              },
+              {
+                duration: 3500,
+                easing: "swing",
+                step: function (now) {
+                  $(this).text(Math.ceil(now) + "%");
+                },
+              }
+            );
+        });
+      });
+    </script>
+
+    <!-- projects -->
+    <div class="projects">
+      <div class="project-adjustment">
+        <h1>Projects I am Proud Of</h1>
+        <article class="project1">
+          <img src="img/manage.png" alt="" class="project-image" />
+          <div>
+            <h3>Latest Project</h3>
+            <h2>Management 2022</h2>
+            <p class="blue-box">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+              facere distinctio, eos nesciunt ea tempore a atque neque quam
+              repellendus nulla. Reprehenderit repudiandae excepturi deserunt
+              facere dicta accusantium harum neque?
+            </p>
+            <h4>Technologies Used Include :</h4>
+            <ul>
+              <li>html</li>
+              <li>css</li>
+              <li>javascript</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <section class="contact-section">
+      <div class="contact2">
+        <h1>Contact Me</h1>
+        <p>
+          I am always interested in learning new technologies and finding new
+          oppurtunities to challenge myself
+        </p>
+        <button class="contact-button">
+          <a href="https://mail.google.com">Email Me</a>
+        </button>
+      </div>
+    </section>
+    <footer>
+      <section class="about">
+        <div class="info">
+          <h1>Saad Ali Khan - Student</h1>
+          <div>
+            <img src="img/icon-facebook.svg" alt="facebook" />
+            <img src="img/icon-instagram.svg" alt="instagram" />
+            <img src="img/icon-twitter.svg" alt="twitter" />
+          </div>
+          <p>Ⓒ 2022 Saad Ali Khan.All rights reserved.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
